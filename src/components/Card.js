@@ -12,5 +12,16 @@ const Card = (props) => {
         </div>
     )
 }
+// const Card = (props) => {
+//     const {lat, long} = props;
+//     return (
+//         <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+//             <div>
+//                 <h2>Latitude: {lat}</h2>
+//                 <h2>Longitude: {long}</h2>
+//             </div>
+//         </div>
+//     )
+// }
 
 export default Card;

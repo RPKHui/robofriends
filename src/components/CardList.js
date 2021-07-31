@@ -1,7 +1,10 @@
 import React from 'react';
 import Card from './Card';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectFilteredRobots } from '../redux/robots/robots.selectors';
 
-const CardList = ({robots}) => {
+const CardList = ({ robots }) => {
     const cardComponent = robots.map((user, i) => {
         //both works
         return (
@@ -21,4 +24,8 @@ const CardList = ({robots}) => {
     )
 }
 
-export default CardList;
+const mapStateToProps = createStructuredSelector({
+    robots: selectFilteredRobots
+})
+
+export default connect(mapStateToProps)(CardList);
